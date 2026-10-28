@@ -1,0 +1,14 @@
+[Unit]
+Description=shop application
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/honistey-shop
+ExecStart=/root/venv/bin/python bot.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
